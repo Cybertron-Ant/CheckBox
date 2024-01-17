@@ -1,18 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_margin="@dimen/margin"
+    android:layout_marginLeft="@dimen/margin"
+    android:layout_marginTop="@dimen/margin"
+    android:layout_marginRight="@dimen/margin"
+    android:layout_marginBottom="@dimen/margin"
+    >
+    <LinearLayout
+        android:id="@+id/fruitsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
 
-    <TextView
+        <CheckBox
+            android:id="@+id/apple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apple"
+            >
+        </CheckBox>
+        <CheckBox
+            android:id="@+id/banana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Banana"
+            >
+        </CheckBox>
+        <CheckBox
+            android:id="@+id/orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Orange"
+            >
+        </CheckBox>
+        <CheckBox
+            android:id="@+id/pineapple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pineapple"
+            >
+        </CheckBox>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSelected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Selected Items"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/fruitsContainer"
+        >
+    </Button>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
