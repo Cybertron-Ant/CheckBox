@@ -6,6 +6,8 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String TAG= "MainActvity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -13,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         // implement fruit selection logic, display in Toast and log to console
-        public static final String TAG= "MainActvity";
+
         CheckBox apple,banana,orange,pineapple;
         Button btnSelected;
 
